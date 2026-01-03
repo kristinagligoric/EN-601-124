@@ -30,16 +30,26 @@
     <link rel="shortcut icon" href="files/favicon.ico"/>
 
     <style>
-        /* Custom styles for content loading */
-        #content-area {
-            min-height: 400px;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
-        .nav-link {
-            cursor: pointer;
+        /* Offset for fixed navbar */
+        .content-section {
+            padding-top: 70px;
+            margin-top: -70px;
         }
-        .navbar-nav li.active > a {
-            background-color: #f8f8f8;
-            font-weight: bold;
+    </style>
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Offset for fixed navbar */
+        section {
+            padding-top: 70px;
+            margin-top: -70px;
         }
     </style>
 </head>
@@ -60,9 +70,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#" class="nav-link" data-page="logistics">Logistics</a></li>
-                <li><a href="#" class="nav-link" data-page="schedule">Schedule</a></li>
-                <li><a href="#" class="nav-link" data-page="conduct">Conduct</a></li>
+                <li><a href="#logistics-section">Logistics</a></li>
+                <li><a href="#schedule-section">Schedule</a></li>
+                <li><a href="#conduct-section">Conduct</a></li>
             </ul>
         </div>
     </div>
@@ -150,9 +160,21 @@
     </div>
 </div>
 
-<!-- Dynamic Content Area -->
-<div id="content-area">
-    <!-- Content will be loaded here dynamically -->
+<!-- Content Sections -->
+<div class="content-section" id="logistics-section">
+    <!-- Logistics content will be loaded here -->
+</div>
+
+<hr>
+
+<div class="content-section" id="schedule-section">
+    <!-- Schedule content will be loaded here -->
+</div>
+
+<hr>
+
+<div class="content-section" id="conduct-section">
+    <!-- Conduct content will be loaded here -->
 </div>
 
 <br><br><br><br>
@@ -162,48 +184,45 @@
 <script src="files/bootstrap.min.js"></script>
 
 <script>
-// Function to load content from external HTML files
-function loadContent(page) {
-    const contentArea = document.getElementById('content-area');
-    
-    // Update active navigation
-    document.querySelectorAll('.navbar-nav li').forEach(li => {
-        li.classList.remove('active');
-    });
-    document.querySelector(`[data-page="${page}"]`).parentElement.classList.add('active');
-    
-    // Load the content
-    fetch(page + '.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Content not found');
-            }
-            return response.text();
-        })
+// Function to load all content files on page load
+function loadAllContent() {
+    // Load logistics
+    fetch('logistics.html')
+        .then(response => response.text())
         .then(html => {
-            contentArea.innerHTML = html;
-            // Scroll to top of content area
-            window.scrollTo(0, document.getElementById('content-area').offsetTop - 80);
+            document.getElementById('logistics-section').innerHTML = html;
         })
         .catch(error => {
-            contentArea.innerHTML = '<div class="container sec"><h2>Error</h2><p>Could not load content. Please try again.</p></div>';
-            console.error('Error loading content:', error);
+            document.getElementById('logistics-section').innerHTML = '<div class="container sec"><h2>Error</h2><p>Could not load logistics content.</p></div>';
+            console.error('Error loading logistics:', error);
+        });
+    
+    // Load schedule
+    fetch('schedule.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('schedule-section').innerHTML = html;
+        })
+        .catch(error => {
+            document.getElementById('schedule-section').innerHTML = '<div class="container sec"><h2>Error</h2><p>Could not load schedule content.</p></div>';
+            console.error('Error loading schedule:', error);
+        });
+    
+    // Load conduct
+    fetch('conduct.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('conduct-section').innerHTML = html;
+        })
+        .catch(error => {
+            document.getElementById('conduct-section').innerHTML = '<div class="container sec"><h2>Error</h2><p>Could not load conduct content.</p></div>';
+            console.error('Error loading conduct:', error);
         });
 }
 
-// Event listeners for navigation
+// Load all content when page is ready
 document.addEventListener('DOMContentLoaded', function() {
-    // Load initial content (logistics by default)
-    loadContent('logistics');
-    
-    // Add click handlers to navigation links
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const page = this.getAttribute('data-page');
-            loadContent(page);
-        });
-    });
+    loadAllContent();
 });
 </script>
 
