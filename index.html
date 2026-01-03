@@ -184,6 +184,11 @@
 <script src="files/bootstrap.min.js"></script>
 
 <script>
+// Force scroll to top on page load
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 // Function to load all content files on page load
 function loadAllContent() {
     // Load logistics
@@ -222,7 +227,16 @@ function loadAllContent() {
 
 // Load all content when page is ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Scroll to top first
+    window.scrollTo(0, 0);
+    
+    // Then load all content
     loadAllContent();
+    
+    // Extra insurance: scroll to top after a brief delay
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 100);
 });
 </script>
 
