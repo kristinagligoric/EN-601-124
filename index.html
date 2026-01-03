@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
 
@@ -30,11 +29,23 @@
     <!--favicon-->
     <link rel="shortcut icon" href="files/favicon.ico"/>
 
+    <style>
+        /* Custom styles for content loading */
+        #content-area {
+            min-height: 400px;
+        }
+        .nav-link {
+            cursor: pointer;
+        }
+        .navbar-nav li.active > a {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="">
 
-<!-- <script src="header.js"></script> -->
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -49,10 +60,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#course">Logistics</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#conduct">Conduct</a></li>
+                <li class="active"><a href="#" class="nav-link" data-page="logistics">Logistics</a></li>
+                <li><a href="#" class="nav-link" data-page="schedule">Schedule</a></li>
+                <li><a href="#" class="nav-link" data-page="conduct">Conduct</a></li>
             </ul>
         </div>
     </div>
@@ -72,31 +82,22 @@
 <div class="container sec" id="intro">
     <p>
         This course prepares engineers to build responsible AI systems by examining the ethical considerations essential for trustworthy technology. Students will explore philosophical foundations of ethics, algorithmic bias, AI safety and factuality, human subjects protection, regulation, and AI's impact on employment and the future of work. Through a semester-long group research project on a topic of their choice, students will apply these concepts to real-world AI challenges, developing the skills needed to design and deploy ethically-sound AI systems.
-
-       
     </p>
     <p>
-        <b> Course Objectives: </b> Upon completion of this course, students will be able to:
+        <b>Course Objectives:</b> Upon completion of this course, students will be able to:
     <ul>
-        <li>Identify and explain key ethical issues in AI and automation from historical, philosophical, and societal perspectives.
-        </li>
-        <li>Analyze different perspectives on AI ethics and their consequences for AI and automation design and evolving policy initiatives across the U.S. and globally.
-        </li>
-        <li>Critically evaluate current emerging AI-enabled technologies through ethical frameworks, as well as forecast ethical dilemmas, and propose ethically aligned solutions.
-        </li>
+        <li>Identify and explain key ethical issues in AI and automation from historical, philosophical, and societal perspectives.</li>
+        <li>Analyze different perspectives on AI ethics and their consequences for AI and automation design and evolving policy initiatives across the U.S. and globally.</li>
+        <li>Critically evaluate current emerging AI-enabled technologies through ethical frameworks, as well as forecast ethical dilemmas, and propose ethically aligned solutions.</li>
     </ul>
     </p>
 
-
     <p>
-        <b> This course will address the following ABET Student Outcomes (SO)</b>:
+        <b>This course will address the following ABET Student Outcomes (SO)</b>:
     <ul>
-        <li>SO3. Communicate effectively in a variety of professional contexts.
-        </li>
-        <li>SO4. Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles.
-        </li>
-        <li> SO5. Function effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline.
-        </li>
+        <li>SO3. Communicate effectively in a variety of professional contexts.</li>
+        <li>SO4. Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles.</li>
+        <li>SO5. Function effectively as a member or leader of a team engaged in activities appropriate to the program's discipline.</li>
     </ul>
     </p>
 
@@ -106,9 +107,9 @@
             href="https://ai-ethics-601-770.cs.jhu.edu/fa2024/index.html">EN.601.770</a>), though it is less advanced.
     </p>
 
-     <p>
+    <p>
         <strong>Thank you to Daniel Khashabi for sharing the course website template!</strong>
-      </p>  
+    </p>  
 </div>
 
 <!-- Staff Info -->
@@ -149,781 +150,62 @@
     </div>
 </div>
 
-
-<div class="container sec" id="logistics">
-    <h2>Logistics</h2>
-    <ul>
-        <li><b>Classes:</b> on Tuesday/Thursday 4:30 - 5:45 pm EST (room: Malone 228)
-        </li>
-<!--        <li><b>Office hours:</b> Daniel office hour: Tuesdays 3:30 - 4:30 pm EST, or by appointment (Hackerman hall, 316B).</li>-->
-        <li><b>Office hours:</b> Daniel office hour: by appointment (Hackerman hall, 316B).</li>
-        <li><b>Contact:</b> If you have any questions about the course, you can post them on Slack.
-        </li>
-        <li><b>Virtual or in-person</b>: The class will be in-person.</li>
-
-        <li><b>News and announcements:</b> All the news and announcements will be made on Slack.</li>
-    </ul>
-</div>
-<hr>
-<div class="container sec" id="links">
-    <h2>Key links</h2>
-    <ul>
-        <li>
-            <a href="https://join.slack.com/t/cs771-fall2025/shared_invite/zt-3an1eqi9y-tNjGKW6~zdHM0X2Gn_eO5Q">Slack</a>
-            for discussion and announcements. Sign up,
-            follow, ask questions, and participate in discussions!
-        </li>
-    </ul>
-</div>
-<hr>
-<div class="container sec" id="overview">
-    <h2><b>Format Overview</b></h2>
-    <p>
-        There will be student-driven discussion and critique sessions in which we go over and discuss selected papers in
-        each area. For each paper, ~two students will be assigned to write a review describing the ‘pros’ and ‘cons’ of
-        the paper, and they will present their critique during the discussion.
-    </p>
+<!-- Dynamic Content Area -->
+<div id="content-area">
+    <!-- Content will be loaded here dynamically -->
 </div>
 
-<hr>
-<div class="container sec" id="expetations">
-    <h2><b>Evaluation and Format Details</b></h2>
-    <ul>
-        <li><b>One assignment (10%)</b> -- <i>individually</i>: The course has ONE assignment to measure your
-            understanding of the foundational
-            concepts of self-supervised learning. This is to make sure that when coming in, you know all the
-            pre-requisites needed for the class. They will be released on this website, and submissions should be
-            uploaded to Gradescope.
-            <ul>
-                <li><b>Submission:</b>The assignment must be submitted through Gradescope.</li>
-                <li><b>Regrading:</b> Regrade requests can be submitted directly within Gradescope and must include a
-                    brief written justification
-                    for the request.
-                </li>
-                <li><b>Late days:</b> There are no late days for the one homework assignment.</li>
-            </ul>
-        </li>
-        <li><b>In-class participation (20%)</b> -- <i>individually</i>. This includes engagement and punctuality
-            (being present in class before the presentation starts).
-            It is important that you attend each session, complete the readings prior to class to participate in the
-            discussions during the class.
-            <ul>
-                <li><b>Step Up/Step Back:</b>
-                    This means, if you are the person who feels very comfortable sharing, take note of how often you are
-                    sharing, and consider giving time for others to share (make sure to not monopolize the class time).
-                    By all means, be present and active in this conversation, but make sure others have the time to as
-                    well. If you tend to be a quiet participant, take a chance and “step up” with your idea, share your
-                    concerns, your ideas, concerns, and excitement with the group. A good facilitator will make sure
-                    this is safe for you.
-                </li>
-                <li><b>Punctuality:</b> We expect you to arrive before the presentations start.
-                    Late arrivals will negatively impact your participation grade.
-                </li>
-            </ul>
-        </li>
-        <li><b>One-page summary and presentation (20%)</b> -- <i>individually</i>.
-            One-page summaries are meant to be mechanism to force us to think about what learned during the class.
-            <ul>
-                <li><b>After the class:</b> After each class, each student will write a "one-pager" summary of what this
-                    class was about and what they learned (due the night before the class). They should organize it so
-                    that one can quicky see the main takeaways.
-                </li>
-                <li><b>Beginning of the class:</b> At the beginning of each class, one of the students (randomly
-                    selected) will remind us what we talked about in the previous class based on their one-pager.
-                </li>
-            </ul>
-        </li>
-        <li><b>Student-led paper presentation and critique (20%)</b> -- <i>in group</i>.
-            This includes presenting papers assigned to you.
-            Most class will involve a ~30-minute presentation by a team of 2-3 students about 1-2 assigned papers.
-            The teams/paper assignments will be communicated at least 10 days ahead of the presentation.
-            <ul>
-                <li><b>Slide feedback:</b> The presenting team must share their slides ahead of time with the course
-                    staff 48
-                    hours before the presentation (Slack channel: #presentation-feedback). We will review the slides and
-                    provide feedback about its content.
-                </li>
-                <li><b>Late days:</b> There are no late days for paper presentations. You cannot miss your presentation
-                    day. If you can't make it, you're responsible for communicating it well in advance (>2 weeks
-                    earlier).
-                </li>
-            </ul>
-        </li>
-        <li><b>The course project (30%)</b> -- <i>teams or individually</i>. See the paragraph below for details</li>
-
-        <li><b>Skip days:</b> You may skip up to 3 classes (during the dates that you're not presenting) with instructor
-            consent ahead of time.
-        </li>
-    </ul>
-</div>
-
-<hr>
-
-<div class="container sec sechighlight6">
-    <h2 id="project">Course Project</h2>
-    <p>
-        Project milestones and deadlines will be released in week 3.
-    </p>
-</div>
-
-
-<hr>
-
-
-<div class="container sec" id="schedule" style="margin-top:-20px">
-    <br>
-    <h2>Content Schedule</h2>
-    <p> The current class schedule is below (subject to change).
-    </p>
-
-    <table class="table">
-        <colgroup>
-            <col style="width:6%">
-            <col style="width:18%">
-            <col style="width:45%">
-        </colgroup>
-        <thead>
-        <tr class="active">
-            <th>Date</th>
-            <th>Research questions</th>
-            <th>Papers and/or slides</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>#1 - Tue Aug 26</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Course overview</li>
-                    <li>Plan and expectations</li>
-                </ul>
-            </td>
-            <td>
-                [slides: <a href="files/slides/01.intro.pptx">pptx</a>, <a href="files/slides/01.intro.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr class="sechighlight5">
-            <td> Aug 26
-            </td>
-            <td>HW1 is <a href="https://www.overleaf.com/read/mwvtgnkbcccb#e2df14">released</a>!</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#2 - Thu Aug 28</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Evaluation</li>
-                    <li>Transformers</li>
-                </ul>
-            </td>
-            <td>
-                [slides: <a href="files/slides/language-modeling.pptx">pptx</a>, <a href="files/slides/language-modeling.pdf">pdf</a>]
-                <br>
-                [slides: <a href="files/slides/transformers.pptx">pptx</a>, <a href="files/slides/transformers.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#3 - Tue Sept 2</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Pre-training: architecture and data.</li>
-                </ul>
-            </td>
-            <td>
-                [slides: <a href="files/slides/transformers-language-models.pptx">pptx</a>,
-                <a href="files/slides/transformers-language-models.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr class="sechighlight5">
-            <td> Sept 4
-            </td>
-            <td>HW1 deadline</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#4 - Thu Sept 4</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Pre-training: the optimization</li>
-                </ul>
-            </td>
-            <td>
-                [slides: <a href="files/slides/transformers-language-models.pptx">pptx</a>,
-                <a href="files/slides/transformers-language-models.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#5 - Tue Sept 9</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Alignment</li>
-                </ul>
-            </td>
-            <td>
-                [slides: <a href="files/slides/alignment.pptx">pptx</a>,
-                <a href="files/slides/alignment.pdf">pdf</a>]
-<!--                Main Reading(s): <a href="https://arxiv.org/abs/2407.21783">The Llama 3 Herd of Models (Sec 3 and the-->
-<!--                relevant portion of Sec 5)</a>-->
-<!--                <br>-->
-<!--                Additional Suggested Reading:-->
-<!--                <ol>-->
-<!--                    <li><a href="https://arxiv.org/abs/2402.00838">OLMo: Accelerating the Science of Language Models</a>-->
-<!--                    </li>-->
-<!--                    <li><a href="https://arxiv.org/abs/2407.21075">Apple Intelligence Foundation Language Models (up to-->
-<!--                        Sec 4 and relevants from Sec 6)</a></li>-->
-<!--                </ol>-->
-<!--                [slides: <a href="files/presentations/9-10-llama3-Kim-Mou.pptx">pptx</a>, <a-->
-<!--                    href="files/presentations/9-10-llama3-Kim-Mou.pdf">pdf</a>]-->
-            </td>
-        </tr>
-        <tr>
-            <td>#6 - Thu Sept 11</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Alignment</li>
-                </ul>
-            </td>
-            <td>
-                [slides: <a href="files/slides/alignment.pptx">pptx</a>,
-                <a href="files/slides/alignment.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr class="sechighlight5">
-            <td> Sept 16
-            </td>
-            <td>One Page Summary template is <a href="https://www.overleaf.com/read/sbnmskfsnzpn#ad1946">available</a>!</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#8 - Tue Sept 16</td>
-            <td style="background-color: #fff2e5;">
-                When (and why) RL is effective for reasoning problem?
-            </td>
-            <td>
-                Main Reading(s):
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2503.14476">DAPO: An Open-Source LLM Reinforcement Learning System at Scale</a></li>
-                    <li><a href="https://arxiv.org/pdf/2503.20783">Understanding R1-Zero-Like Training: A Critical Perspective</a></li>
-                </ol>
-                [slides: <a href="files/presentations/Why-RL-Sep16-AdvancesNLP.pptx">pptx</a>, <a href="files/presentations/Why-RL-Sep16-AdvancesNLP.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#9 - Thu Sept 18</td>
-            <td style="background-color: #fffce5;">
-                Does RL instill new abilities in models?
-            </td>
-            <td>
-                Main Reading(s):
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2504.13837">Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?</a></li>
-                    <li><a href="https://arxiv.org/pdf/2505.24864">ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models</a></li>
-                </ol>
-                [slides: <a href="files/presentations/Self-Supervised-Paper-Sep18-Presentation.pptx">pptx</a>, <a href="files/presentations/Self-Supervised-Paper-Sep18-Presentation.pdf">pdf</a>]
-<!--                [slides: <a href="files/presentations/9-17-FineWeb-Sharma-Guan.pptx">pptx</a>, <a-->
-<!--                    href="files/presentations/9-17-FineWeb-Sharma-Guan.pdf">pdf</a>]-->
-            </td>
-        </tr>
-        <tr>
-            <td>#9 - Tue Sept 23</td>
-            <td style="background-color: #e8ffdf;">
-                Does RL-based training generalize?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2509.04259">RL's Razor: Why Online Reinforcement Learning Forgets Less</a></li>
-                    <li><a href="https://arxiv.org/abs/2501.17161">SFT Memorizes, RL Generalizes.</a></li>
-                </ol>
-                [slides: <a href="files/presentations/RL-generalize-Sep23.pptx">pptx</a>, <a href="files/presentations/RL-generalize-Sep23.pdf">pdf</a>]
-<!--                [slides: <a href="files/presentations/9-26-Reasoning-Kote-Gao.pptx">pptx</a>, <a-->
-<!--                    href="files/presentations/9-26-Reasoning-Kote-Gao.pdf">pdf</a>]-->
-            </td>
-        </tr>
-        <tr>
-            <td>#10 - Thu Sept 25</td>
-            <td style="background-color: #f7ffe5;">
-                Does inference-time reasoning lead to more creative problem-solving?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2506.17871">How Alignment Shrinks the Generative Horizon</a></li>
-                    <li><a href="https://arxiv.org/abs/2504.15266">Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction</a></li>
-                </ol>
-                [slides: <a href="files/presentations/Reasoning-creative-Sep25.pptx">pptx</a>, <a href="files/presentations/Reasoning-creative-Sep25.pdf">pdf</a>]
-<!--                [slides: <a href="files/presentations/9-24-Supervision-Zhong-Lin.pptx">pptx</a>, <a-->
-<!--                    href="files/presentations/9-24-Supervision-Zhong-Lin.pdf">pdf</a>]-->
-            </td>
-        </tr>
-        <tr>
-            <td>#11 - Tue Sept 30</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Positional encoding</li>
-                    <li>Context expansion</li>
-                    <li>Context generalization</li>
-                </ul>
-                <!--                What are the other failure modes of inference-time reasoning?-->
-            </td>
-            <td>
-<!--                <ol>-->
-<!--                    <li><a href="https://arxiv.org/abs/2406.04093">Scaling and evaluating sparse autoencoders</a></li>-->
-<!--                    <li><a href="https://arxiv.org/abs/2408.00657">Disentangling Dense Embeddings with Sparse-->
-<!--                        Autoencoders</a></li>-->
-<!--                </ol>-->
-                [slides: <a href="files/slides/processing-lots-of-things.pptx">pptx</a>, <a
-                    href="files/slides/processing-lots-of-things.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#12 - Thu Oct 2</td>
-            <td style="background-color: #dffff8;">
-                How robustly can LLMs process lengthy context?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2505.06120">LLMs Get Lost In Multi-Turn Conversation</a></li>
-                    <li><a href="https://arxiv.org/pdf/2507.11538">How Many Instructions Can LLMs Follow at Once?</a></li>
-                </ol>
-               [slides: <a href="files/presentations/LengthyContext-Oct2.pptx">pptx</a>, <a
-                   href="files/presentations/LengthyContext-Oct2.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#13 - Tue Oct 7</td>
-            <td style="background-color: #dff9ff;">
-                Cancelled - Reading days
-            </td>
-            <td>
-
-            </td>
-        </tr>
-        <tr class="sechighlight5">
-            <td>Oct 7</td>
-            <td>Project proposals deadline</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#14 - Thu Oct 9</td>
-            <td style="background-color: #dff1ff;">
-                Cancelled - Reading day
-            </td>
-            <td>
-<!--                Main Reading(s): <a href="https://arxiv.org/abs/2306.00978">AWQ: Activation-aware Weight Quantization-->
-<!--                for LLM Compression and Acceleration</a>-->
-<!--                <br>-->
-<!--                Additional Suggested Reading:-->
-<!--                <ol>-->
-<!--                    <li><a href="https://arxiv.org/abs/2210.17323">GPTQ: Accurate Post-Training Quantization for-->
-<!--                        Generative Pre-trained Transformers</a></li>-->
-<!--                    <li><a href="https://arxiv.org/abs/2208.11580">Optimal brain compression: A framework for accurate-->
-<!--                        post-training quantization and pruning</a></li>-->
-<!--                    <li><a href="https://arxiv.org/pdf/2401.06118">Extreme Compression of Large Language Models via-->
-<!--                        Additive Quantization</a></li>-->
-<!--                    <li><a href="https://arxiv.org/abs/2211.10438">SmoothQuant: Accurate and Efficient Post-Training-->
-<!--                        Quantization for Large Language Models</a></li>-->
-<!--                </ol>-->
-<!--                [slides: <a href="files/presentations/10-10-Quantization-Li-Ramesh.pptx">pptx</a>, <a-->
-<!--                    href="files/presentations/10-10-Quantization-Li-Ramesh.pdf">pdf</a>]-->
-            </td>
-        </tr>
-        <tr>
-            <td>#15 - Tue Oct 14</td>
-            <td style="background-color: #dfefff;">
-                Is the underlying data distribution the real bottleneck limiting models’ effective context length? Can posthoc context-extending truly "fix" such failures?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2410.18745">Why Does the Effective Context Length of LLMs Fall Short?</a></li>
-                </ol>
-<!--                [slides: <a href="files/presentations/10-15-Reasoning-Liang-Kim.pptx">pptx</a>, <a-->
-<!--                    href="files/presentations/10-15-Reasoning-Liang-Kim.pdf">pdf</a>]-->
-               [slides: <a href="files/presentations/ContextLength-Oct14.pptx">pptx</a>, <a
-                   href="files/presentations/ContextLength-Oct14.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr class="sechighlight4 centered">
-            <td>#16 - Thu Oct 16</td>
-            <td>No Class - Fall break</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#17 - Tue Oct 21</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>KV-Cache, drag and evictions</li>
-                </ul>
-            </td>
-            <td>
-<!--                Main Reading(s): <a href="https://arxiv.org/pdf/2211.17192">Fast Inference from Transformers via-->
-<!--                Speculative Decoding</a>-->
-<!--                <br>-->
-<!--                Additional Suggested Reading:-->
-<!--                <ol>-->
-<!--                    <li><a href="https://arxiv.org/pdf/2405.19325">Nearest Neighbor Speculative Decoding for LLM-->
-<!--                        Generation and Attribution</a></li>-->
-<!--                    <li><a href="https://arxiv.org/pdf/2401.10774">Medusa: Simple LLM Inference Acceleration Framework-->
-<!--                        with Multiple Decoding Heads</a></li>-->
-<!--                    <li><a href="https://aclanthology.org/2022.naacl-main.396/">Few-Shot Semantic Parsing with Language-->
-<!--                        Models Trained on Code</a></li>-->
-<!--                    <li><a href="https://github.com/hemingkx/SpeculativeDecodingPapers">A semi-comprehensive collection-->
-<!--                        of papers around "speculative decoding"</a></li>-->
-<!--                </ol>-->
-                [slides: <a href="files/slides/efficiency.pptx">pptx</a>, <a
-                    href="files/slides/efficiency.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#18 - Thu Oct 23</td>
-            <td style="background-color: #e5e9ff;">
-                Reviewing the foundation:
-                <ul>
-                    <li>Distributed training and inference</li>
-                </ul>
-            </td>
-            <td>
-<!--                Main Reading(s): <a href="https://arxiv.org/pdf/2410.02660">How to Train Long-Context Language Models-->
-<!--                (Effectively)</a>-->
-<!--                <br>-->
-<!--                Additional Suggested Reading:-->
-<!--                <ol>-->
-<!--                    <li><a href="https://arxiv.org/pdf/2309.16039">Effective Long-Context Scaling of Foundation-->
-<!--                        Models</a></li>-->
-<!--                    <li><a href="https://arxiv.org/pdf/2402.10171">Data Engineering for Scaling Language Models to 128K-->
-<!--                        Context</a></li>-->
-<!--                </ol>-->
-        [slides: <a href="files/slides/efficiency.pptx">pptx</a>, <a
-                    href="files/slides/efficiency.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr class="sechighlight5">
-            <td> Oct 24</td>
-            <td>Progress report #1 deadline</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#19 - Tue Oct 28</td>
-            <td style="background-color: #f0dfff;">
-                How can LLMs’ internal structure enable efficient, query-agnostic KV cache compression without performance loss?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2406.02069">PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling</a></li>
-                    <li><a href="https://arxiv.org/pdf/2505.23416">KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction</a></li>
-                </ol>
-               [slides: <a href="files/presentations/PyramidKV-Oct28.pptx">pptx</a>, <a
-                   href="files/presentations/PyramidKV-Oct28.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#20 - Thu Oct 30</td>
-            <td style="background-color: #f9dfff;">
-                Can LLM attention enable efficient KV caching with frugal memory without hurting long-context reasoning?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2410.10819">DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads</a></li>
-                    <li><a href="https://openreview.net/forum?id=ulCAPXYXfa">OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs</a></li>
-                </ol>
-               [slides: <a href="files/presentations/kv-cache-Oct30.pptx">pptx</a>, <a
-                   href="files/presentations/kv-cache-Oct30.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#21 - Tue Nov 4</td>
-            <td style="background-color: #ffdff8;">
-                Can KV-cache serve as compact memory module when reasoning over long or unbounded contexts?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2506.06266">Cartridges: Lightweight and general-purpose long context representations via self-study</a>
-                    </li>
-                    <li><a href="https://openreview.net/pdf?id=8w0RApM5yG">BumbleBee: Dynamic KV-Cache Streaming Submodular Summarization for Infinite-Context Transformers</a></li>
-                </ol>
-               [slides: <a href="files/presentations/kv-cache-mem-Nov4.pptx">pptx</a>, <a
-                   href="files/presentations/kv-cache-mem-Nov4.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#22 - Thu Nov 6</td>
-            <td style="background-color: #ffdfdf;">
-                Can we preserve reasoning integrity under efficiency and precision constraints?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2506.09501">Give Me FP32 or Give Me Death? Challenges and Solutions for Reproducible Reasoning</a></li>
-                    <li><a href="https://arxiv.org/abs/2504.02010">When Reasoning Meets Compression: Understanding the Effects of LLMs Compression on Large Reasoning Models</a></li>
-                </ol>
-               [slides: <a href="files/presentations/Reasoning-integrity-Nov6.pptx">pptx</a>, <a
-                    href="files/presentations/Reasoning-integrity-Nov6.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#23 - Tue Nov 11</td>
-            <td style="background-color: #ffebdf;">
-                How can language models dynamically allocate resources for parallel thinking?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2504.15466">Learning Adaptive Parallel Reasoning with Language Models</a></li>
-                    <li><a href="https://arxiv.org/pdf/2504.06261">Hogwild! Inference: Parallel LLM Generation via Concurrent Attention</a></li>
-                </ol>
-               [slides: <a href="files/presentations/parallel-reasoning_Nov11.pptx">pptx</a>, <a
-                   href="files/presentations/parallel-reasoning_Nov11.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#24 - Thu Nov 13</td>
-            <td style="background-color: #fff5df;">
-                Does rethinking text as vision allow us to scale LLMs better?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://www.arxiv.org/pdf/2510.18234">DeepSeek-OCR: Contexts Optical Compression</a></li>
-                    <li><a href="https://arxiv.org/pdf/2510.17800">Glyph: Scaling Context Windows via Visual-Text Compression</a></li>
-                </ol>
-               [slides: <a href="files/presentations/OCR-Nov13.pptx">pptx</a>, <a
-                   href="files/presentations/OCR-Nov13.pdf">pdf</a>]
-            </td>
-
-        </tr>
-        <tr>
-            <td>#25 - Tue Nov 18</td>
-            <td style="background-color: #e2ffdf;">
-                Can dynamic byte-level patches outperform fixed tokens as the basic unit for scaling LMs?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2412.09871">Byte Latent Transformer: Patches Scale Better  Than Tokens</a></li>
-                    <li><a href="https://arxiv.org/pdf/2507.07955">Dynamic Chunking for End-to-End Hierarchical Sequence Modeling</a></li>
-                </ol>
-<!--                <br>-->
-               [slides: <a href="files/presentations/HNETS-BLT-Nov18.pptx">pptx</a>, <a
-                   href="files/presentations/HNETS-BLT-Nov18.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#26 - Thu Nov 20</td>
-            <td style="background-color: #f4ffdf;">
-                Do the "base" models already capable ot superior reasoning abilities seen in RL-ed or "thinking" LMs?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2510.14901">Reasoning with Sampling: Your Base Model is Smarter Than You Think</a></li>
-                    <li><a href="https://arxiv.org/abs/2510.07364">Base Models Know How to Reason, Thinking Models Learn When</a></li>
-                </ol>
-               [slides: <a href="files/presentations/RL-Nov20.pptx">pptx</a>, <a
-                   href="files/presentations/RL-Nov20.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr class="sechighlight5">
-            <td> Nov 21
-            </td>
-            <td>Progress report #2 deadline</td>
-            <td></td>
-        </tr>
-        <tr class="sechighlight4 centered">
-            <td>#27 - Tue Nov 25</td>
-            <td>No Class - Fall Recess</td>
-            <td></td>
-        </tr>
-        <tr class="sechighlight4 centered">
-            <td>#28 - Thu Nov 27</td>
-            <td>No Class - Fall Recess</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#29 - Tue Dec 2</td>
-            <td style="background-color: #fffddf;">
-                Can internal representations of different LLMs be shared or mapped across models?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2510.03215">Cache-to-Cache: Direct Semantic Communication Between Large Language Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2506.00653">Linear Representation Transferability Hypothesis: Leveraging Small Models to Steer Large Models</a></li>
-                </ol>
-               [slides: <a href="files/presentations/Internal-rep-Dec2.pptx">pptx</a>, <a
-                   href="files/presentations/Internal-rep-Dec2.pdf">pdf</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#30 - Thu Dec 4</td>
-            <td style="background-color: #dfffe7;">
-                Can sparse memory updates allow LLMs to continually learn?
-            </td>
-            <td>
-                <ol>
-                    <li><a href="https://arxiv.org/pdf/2412.09764">Memory Layers at Scale</a></li>
-                    <li><a href="https://arxiv.org/pdf/2510.15103">Continual Learning via Sparse Memory Finetuning</a></li>
-                </ol>
-                [slides: <a href="files/presentations/Continual-learn-Dec4.pptx">pptx</a>, <a
-                   href="files/presentations/Continual-learn-Dec4.pdf">pdf</a>]
-            </td>
-        </tr>
-
-        <tr class="sechighlight4 centered">
-            <td>Dec 8-11</td>
-            <td>Reading Days</td>
-            <td></td>
-        </tr>
-        <tr class="sechighlight5">
-            <td>Dec 10</td>
-            <td colspan="2">Final project poster session (2-4pm) --
-                <a href="https://studentaffairs.jhu.edu/registrar/wp-content/uploads/sites/23/2025/08/Fall2025-_FinalExamSchedule.pdf">final
-                exam schedule</a></td>
-        </tr>
-        <tr class="sechighlight5">
-            <td> Dec 12
-            </td>
-            <td>Final project reports</td>
-            <td>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<!--<hr>-->
-<!--<div class="container sec" id="resources">-->
-<!--    <h2>Relevant Resources</h2>-->
-<!--    <p>Here are several resources available for free:</p>-->
-<!--    <ul>-->
-<!--        <li>Compute resources:-->
-<!--            <ul>-->
-<!--                &lt;!&ndash;                <li>Grad students should have access to the graduate grid which has GPUs.</li>&ndash;&gt;-->
-<!--                &lt;!&ndash;                <li>Undergraduate students should have access to the undergrad grid.</li>&ndash;&gt;-->
-<!--                <li><a href="https://colab.research.google.com/">Google Colab</a> provides free GPU usage for up to 12-->
-<!--                    hours/day for academic purposes. One can obtain <a-->
-<!--                            href="https://medium.com/@yufengg/how-to-upgrade-colab-with-more-compute-64d53a9b05dc"> more-->
-<!--                        compute on Colab</a> with relatively minimal pay.-->
-<!--                </li>-->
-<!--                <li>Google offers <a href="https://sites.research.google/trc/about/">research TPU credits</a>.</li>-->
-<!--                &lt;!&ndash;                <li><a href="https://www.kaggle.com/general/108481">Kaggle</a> offers GPUs for its users.</li>&ndash;&gt;-->
-<!--                <li><a href="https://aws.amazon.com/education/awseducate/">AWS</a> and <a-->
-<!--                        href="https://azure.microsoft.com/en-us/free/students/">Azure</a> both offer welcome credits to-->
-<!--                    students.-->
-<!--                </li>-->
-<!--                <li>If you need credits to use GPT3/GPT4 or other APIs, discuss it with the instructor.</li>-->
-<!--            </ul>-->
-<!--        </li>-->
-<!--        <li>Demos:-->
-<!--            <ul>-->
-<!--                <li><a href="https://arena.lmsys.org/">Chatbot Arena</a></li>-->
-<!--                <li><a href="https://www.together.ai/">Together provides fast infrastructure for running models</a></li>-->
-<!--                <li><a href="https://c4-search.apps.allenai.org">A queryable interface to C4</a></li>-->
-<!--            </ul>-->
-<!--        </li>-->
-<!--        <li>Tutorials:</li>-->
-<!--        <ul>-->
-<!--            <li>A <a href="https://huggingface.co/course/chapter1/1">course</a> on Huggingface's Transformers library.-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </ul>-->
-<!--    <p>-->
-<!--&lt;!&ndash;        Besides these resources, we will try our best to satisfy individual needs through discussion.&ndash;&gt;-->
-<!--    </p>-->
-<!--</div>-->
-
-
-<hr>
-<div class="container sec" id="conduct">
-    <h2>Code of Conduct</h2>
-    <p>
-        The strength of the university depends on academic and personal integrity. In this course,
-        you must be honest and truthful, abiding by the Computer Science Academic Integrity Policy:
-    </p>
-
-
-    <div class="container sec" id="cs-conduct">
-        <i>
-            <p>
-                Cheating is wrong. Cheating hurts our community by undermining academic
-                integrity, creating mistrust, and fostering unfair competition. The university will
-                punish cheaters with failure on an assignment, failure in a course, permanent
-                transcript notation, suspension, and/or expulsion. Offenses may be reported to
-                medical, law or other professional or graduate schools when a cheater applies.
-                Violations can include cheating on exams, plagiarism, reuse of assignments without
-                permission, improper use of the Internet and electronic devices, unauthorized
-                collaboration, alteration of graded assignments, forgery and falsification, lying,
-                facilitating academic dishonesty, and unfair competition. Ignorance of these rules
-                is not an excuse.
-            </p>
-            <p>
-                Academic honesty is required in all work you submit to be graded. Except where
-                the instructor specifies group work, you must solve all homework and programming
-                assignments without the help of others. For example, you must not look at anyone
-                else’s solutions (including program code) to your homework problems. However,
-                you may discuss assignment specifications (not solutions) with others to be sure
-                you understand what is required by the assignment.
-                If your instructor permits using fragments of source code from outside sources, such
-                as your textbook or on-line resources, you must properly cite the source. Not citing
-                it constitutes plagiarism. Similarly, your group projects must list everyone who
-                participated.
-            </p>
-            <p>
-                In the above paragraph "outside sources" also include content that was produced by an AI assistant
-                like ChatGPT.
-                This follows either by treating the AI assistant as a person for the purposes of this policy
-                (controversial) or acknowledging that the AI assistant was trained directly on people's original work.
-                Thus, while you are not forbidden from using these tools, you should consider the above policy
-                carefully and quote where appropriate. Assignments that are in large part quoted from an AI
-                assistant are very unlikely to be evaluated positively. In addition, if a student's work is
-                substantially identical to another student's work, that will be grounds for an investigation
-                of plagiarism regardless of whether the prose was produced by an AI assistant.
-            </p>
-            <p>
-                Falsifying program output or results is prohibited.
-                Your instructor is free to override parts of this policy for particular assignments. To
-                protect yourself: (1) Ask the instructor if you are not sure what is permissible. (2)
-                Seek help from the instructor, TA or CAs, as you are always encouraged to do,
-                rather than from other students. (3) Cite any questionable sources of help you may
-                have received.
-            </p>
-        </i>
-    </div>
-
-    <p>
-        <!--        On every exam, you will sign the following pledge: "I agree to complete this exam-->
-        <!--    without unauthorized assistance from any person, materials or device. [Signed and-->
-        <!--    dated]". Your course instructors will let you know where to find copies of old exams,-->
-        <!--    if they are available.-->
-        Report any violations you witness to the instructor.
-        You can find more information about university misconduct policies on the web for
-        <a href="https://studentaffairs.jhu.edu/policies-guidelines/undergradethics/">undergraduates</a> and
-        <a href="http://e-catalog.jhu.edu/grad-students/graduate-specificpolicies/">graduates</a> students.
-    </p>
-    <!--    <p>-->
-    <!--        This course will have a zero-tolerance philosophy regarding <a-->
-    <!--            href="https://www.cs.jhu.edu/academic-programs/academic-integrity-code/">plagiarism or other forms of-->
-    <!--        cheating</a>, and incidents-->
-    <!--        of academic dishonesty will be reported. A student who has doubts about how the Honor Code applies to this-->
-    <!--        course should obtain specific guidance from the course instructor before submitting the respective assignment.-->
-    <!--    </p>-->
-    <p>
-        Johns Hopkins University is committed to equal opportunity for its faculty, staff, and students.
-        To that end, the university does not discriminate on the basis of sex, gender, marital status, pregnancy, race,
-        color, ethnicity, national origin, age, disability, religion, sexual orientation, gender identity or expression,
-        veteran status, military status, immigration status or other legally protected characteristic.
-        The University's <a
-            href="https://oie.jhu.edu/policies-and-laws/JHU-Discrimination-and-Harassment-Policy-and-Procedures-7.1.21-Present">Discrimination
-        and Harassment Policy and Procedures</a> provides information on how to report or file a complaint of
-        discrimination or harassment based on any of the protected statuses listed in the earlier sentence, and the
-        University’s prompt and equitable response to such complaints.
-    </p>
-</div>
 <br><br><br><br>
-
 
 <!-- jQuery and Bootstrap -->
 <script src="files/jquery.min.js"></script>
 <script src="files/bootstrap.min.js"></script>
 
+<script>
+// Function to load content from external HTML files
+function loadContent(page) {
+    const contentArea = document.getElementById('content-area');
+    
+    // Update active navigation
+    document.querySelectorAll('.navbar-nav li').forEach(li => {
+        li.classList.remove('active');
+    });
+    document.querySelector(`[data-page="${page}"]`).parentElement.classList.add('active');
+    
+    // Load the content
+    fetch(page + '.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Content not found');
+            }
+            return response.text();
+        })
+        .then(html => {
+            contentArea.innerHTML = html;
+            // Scroll to top of content area
+            window.scrollTo(0, document.getElementById('content-area').offsetTop - 80);
+        })
+        .catch(error => {
+            contentArea.innerHTML = '<div class="container sec"><h2>Error</h2><p>Could not load content. Please try again.</p></div>';
+            console.error('Error loading content:', error);
+        });
+}
+
+// Event listeners for navigation
+document.addEventListener('DOMContentLoaded', function() {
+    // Load initial content (logistics by default)
+    loadContent('logistics');
+    
+    // Add click handlers to navigation links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const page = this.getAttribute('data-page');
+            loadContent(page);
+        });
+    });
+});
+</script>
 
 </body>
 </html>
